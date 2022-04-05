@@ -39,8 +39,6 @@ namespace Form__add_user_.Controllers
 
     
 
-            
-
             return View(model);
         }
 
