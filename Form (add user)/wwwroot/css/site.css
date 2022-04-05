@@ -1,0 +1,101 @@
+﻿
+:root {
+    --primary-color: deepskyblue;
+    --secondary-color: #318CE7;
+}
+
+body {
+
+    background-color: var(--secondary-color);
+
+}
+
+.inside {
+    position: relative;
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    position: relative;
+    background-color: #FFFFFF;
+    height: 100%;
+    border: 5px solid var(--primary-color);
+    border-radius: 5%;
+    text-align: center;
+    display: inline-block;
+    margin: 1%;
+    flex: 2 2 auto;
+}
+
+.cardinside {
+    margin: auto;
+    text-align: center;
+    display: inline-block;
+    text-align: center;
+    align-content:center;
+    
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50% !important;
+}
+
+
+
+p{
+    text-align:justify;
+    padding-left:5px;
+    font-weight:bold;
+    font-size:15pt;
+}
+
+span {
+    color:var(--secondary-color);
+    text-align:right;
+}
+
+.Register {
+    color: var(--primary-color);
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 50px;
+    margin: auto;
+    text-align: center;
+    text-align: center;
+    align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 25pt;
+    border: 5px solid var(--primary-color);
+    width: 98%;
+    text-decoration: none;
+}
+
+.Register:hover {
+    color: white;
+    background-color: var(--primary-color);
+    border: 5px solid white;
+    text-decoration: none;
+}
+
+.center {
+    max-width:25%;
+    width: 20%;
+    position: relative;
+    height: 50%;
+    align-items: center;
+    transform: translate(200%, 150%);
+}
+

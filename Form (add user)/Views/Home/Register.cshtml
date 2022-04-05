@@ -1,0 +1,83 @@
+﻿@model Form__add_user_.Models.UserViewModel
+
+@{
+    Layout = null;
+    Guid guid = Guid.NewGuid();
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="stylesheet" href="~/css/reset.css">
+    <link rel="stylesheet" href="~/css/site.css">
+    <script src="~/js/site.js"></script>
+
+    <title>Register</title>
+</head>
+<body>
+
+    <div class="inside center">
+
+        <div class="card">
+
+        <br />
+
+          <form asp-action="Register" asp-controller="Home" class="cardinside" enctype="multipart/form-data">
+
+              <div class="inputfield">
+
+                <input asp-for="@Model.User.Id" type="text" placeholder="@guid" readonly value="@guid">
+           
+              </div>
+
+              <br />
+
+              <div class="inputfield">
+
+                <input asp-for="@Model.User.Name" type="text" placeholder="Enter Name">
+           
+              </div>
+
+              <br />
+
+              <div class="inputfield">
+
+                <input asp-for="@Model.User.Surname" type="text" placeholder="Enter Surname">
+           
+              </div>
+
+              <br />
+
+              <div class="inputfield">
+
+                <input type="number" id="quantity" name="quantity" min="1" max="100000" asp-for="@Model.User.Age" placeholder="Enter Age">
+           
+              </div>
+
+              <br />
+
+              <div class="inputfield">
+
+                <input type="file" asp-for="@Model.FormFile" placeholder="Upload image">
+        
+              </div>
+
+              <br />
+
+              <button type="submit" class="btn btn-primary">Submit</button>
+
+              <br />
+              <br />
+
+        </form>
+  
+   </div>
+
+    </div>
+   
+
+</body>
+</html>

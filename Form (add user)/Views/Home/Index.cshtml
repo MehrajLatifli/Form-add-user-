@@ -1,0 +1,90 @@
+﻿@model Form__add_user_.Models.UserListViewModel
+
+@{
+    Layout = null;
+    string r = "";
+
+    var result = @ViewData["a"] as string[];
+
+    if(result!=null)
+    {
+
+        r =String.Concat(result);
+
+    }
+
+
+
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="stylesheet" href="~/css/reset.css">
+    <link rel="stylesheet" href="~/css/site.css">
+    <script language="javascript" type="text/javascript" src="js/site.js"></script>
+    
+    <title>Index</title>
+</head>
+<body >
+    
+  <div>@r</div>
+
+    <div class="inside">
+
+        @foreach (var item in Model.Users)
+        {
+
+          <div class="card" style="width: 18rem;">
+
+              
+             <div class="cardinside">
+                @{
+
+                   var file="/images/"+item.ImageUrl;
+ 
+                }
+
+                <img src="@file"alt="..."/>
+
+
+                <p >Id: <span> @item.Id </span> </p>
+                <br/>
+                <p >Name: <span> @item.Name </span> </p>
+                <br/>
+                <p >Surname: <span> @item.Surname </span> </p>
+                <br/>
+                <p >Age: <span> @item.Age </span> </p>
+                <br/>
+
+             </div>
+
+
+          </div>
+
+          <br />
+        }
+
+    
+
+    </div>
+
+    <footer>
+
+        
+      <a onclick="MessageBox('@r.ToString()')" type="text/asp" asp-controller="Home" asp-action="Register" class="Register">Registration</a>
+
+
+
+    </footer>
+   
+
+
+
+</body>
+</html>
