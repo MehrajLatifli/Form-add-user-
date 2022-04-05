@@ -62,7 +62,7 @@ namespace Form__add_user_.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        public void Deleteimage()
+        public IActionResult Deleteimage()
         {
             string[] files = Directory.GetFiles(@"wwwroot\\images", "*.*", SearchOption.AllDirectories);
 
@@ -109,6 +109,8 @@ namespace Form__add_user_.Controllers
                     }
                 }
             };
+
+            return NoContent();
         }
     }
 }
